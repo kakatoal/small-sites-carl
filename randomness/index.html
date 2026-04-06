@@ -1,14 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Small Sites; Big Stories | Randomness</title>
-	<link rel="stylesheet" href="randomness.css">
-</head>
-<body>
-	<h1>RANDOMNESS!</h1>
 
-	<script src="randomness.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #box1,
+        #box2,
+        #box3,
+        #box4,
+        #box5,
+        #box6 {
+            transition: .5s;
+            position: absolute;
+
+        }
+    </style>
+
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+    <div id="box5"></div>
+    <div id="box6"></div>
+
+
+    <script>
+        let box1 = document.querySelector("#box1");
+        let box2 = document.querySelector("#box2");
+        let box3 = document.querySelector("#box3");
+        let box4 = document.querySelector("#box4");
+        let box5 = document.querySelector("#box5");
+        let box6 = document.querySelector("#box6");
+
+
+        function randomizeBox() {
+            let size1 = Math.random() * 800 + 110 + "px";
+            let size2 = Math.random() * 700 + 90 + "px";
+            let size3 = Math.random() * 600 + 70 + "px";
+            let size4 = Math.random() * 500 + 50 + "px";
+            let size5 = Math.random() * 400 + 30 + "px";
+            let size6 = Math.random() * 300 + 10 + "px";
+
+            box1.style.width = size1;
+            box1.style.height = size1;
+            box1.style.backgroundColor = "purple";
+            box1.style.opacity = Math.random();
+
+            box2.style.width = size2;
+            box2.style.height = size2;
+            box2.style.backgroundColor = "blue";
+            box2.style.opacity = Math.random();
+
+            box3.style.width = size3;
+            box3.style.height = size3;
+            box3.style.backgroundColor = "green";
+            box3.style.opacity = Math.random();
+
+            box4.style.width = size4;
+            box4.style.height = size4;
+            box4.style.backgroundColor = "yellow";
+            box4.style.opacity = Math.random();
+
+            box5.style.width = size5;
+            box5.style.height = size5;
+            box5.style.backgroundColor = "orange";
+            box5.style.opacity = Math.random();
+
+            box6.style.width = size6;
+            box6.style.height = size6;
+            box6.style.backgroundColor = "red";
+            box6.style.opacity = Math.random();
+
+        }
+
+        setInterval(randomizeBox, 800)
+    </script>
 </body>
+
 </html>

@@ -1,14 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Small Sites; Big Stories | Interaction</title>
-	<link rel="stylesheet" href="interaction.css">
+	<title>Document</title>
 </head>
-<body>
-	<h1>INTERACTION!</h1>
 
-	<script src="interaction.js"></script>
+<body>
+	<style>
+		body {
+			margin: 0;
+			height: 100vh;
+		}
+
+		#canvas {
+			width: 800px;
+			height: 600px;
+			border: 5px solid rgb(0, 158, 108);
+			position: relative;
+		}
+
+		#brush {
+			position: absolute;
+			width: 40px;
+			height: 40px;
+			background-color: black;
+			transform: translate(-50%, -50%);
+			pointer-events: none;
+		}
+	</style>
+
+	
+	<div id="canvas">
+		<div id="brush"></div>
+	</div>
+	<h1>Hello this is a canvas hahaha</h1>
+
+	<script>
+		let canvas = document.querySelector("#canvas");
+		let brush = document.querySelector("#brush");
+
+		document.addEventListener("mousemove", function (event) {
+			brush.style.left = event.x + "px";
+			brush.style.top = event.y + "px";
+
+		});
+
+		document.addEventListener("mousedown", function (event) {
+			let dot = document.createElement("div");
+			dot.style.position = "absolute";
+			dot.style.width = "40px";
+			dot.style.height = "40px";
+			dot.style.backgroundColor = "black";
+			dot.style.left = event.x - 20 + "px";
+			dot.style.top = event.y - 20 + "px";
+			document.body.appendChild(dot);
+		});
+
+		canvas.addEventListener("mouseleave", function(){
+			document.querySelector("h1").textContent = "WHat Are u doing??! GO backkkkkkk!!!"
+		})
+
+		canvas.addEventListener("mouseenter", function(){
+			document.querySelector("h1").textContent = "Hello this is a canvas hahaha"
+		})
+	</script>
 </body>
+
 </html>
