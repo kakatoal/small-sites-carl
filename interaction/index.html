@@ -31,7 +31,7 @@
 		}
 	</style>
 
-	
+
 	<div id="canvas">
 		<div id="brush"></div>
 	</div>
@@ -55,16 +55,19 @@
 			dot.style.backgroundColor = "black";
 			dot.style.left = event.x - 20 + "px";
 			dot.style.top = event.y - 20 + "px";
+			dot.style.pointerEvents = "none";
 			document.body.appendChild(dot);
 		});
 
-		canvas.addEventListener("mouseleave", function(){
+		canvas.addEventListener("mouseleave", function () {
 			document.querySelector("h1").textContent = "WHat Are u doing??! GO backkkkkkk!!!"
 		})
 
-		canvas.addEventListener("mouseenter", function(){
+		canvas.addEventListener("mouseenter", function () {
 			document.querySelector("h1").textContent = "Hello this is a canvas hahaha"
 		})
+
+
 	</script>
 </body>
 
