@@ -19,7 +19,7 @@ h1:hover {
 }
 
 body {
-	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-family: Impact, Haettenschweiler, sans-serif;
 	font-size: larger;
 	background-color: hsl(45, 100%, 51%);
 	height: 100dvh;
