@@ -62,6 +62,10 @@ nav {
 a {
 	color: rgb(0, 0, 0);
 	text-decoration: none;
-	font-family: fantasy;
+	font-family:  Impact, Haettenschweiler, sans-serif;
 
+}
+
+nav {
+	font-family:  Impact, Haettenschweiler, sans-serif;
 }
